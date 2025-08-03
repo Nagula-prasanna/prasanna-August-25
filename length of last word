@@ -1,0 +1,10 @@
+class Solution(object):
+    def lengthOfLastWord(self, s):
+        s = s.rstrip()[::-1]
+        count = 0
+        for st in s:
+            if st != ' ':
+                count += 1
+            else:
+                break
+        return count
