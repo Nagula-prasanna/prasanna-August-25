@@ -1,0 +1,11 @@
+class Solution(object):
+    def singleNumber(self, nums):
+        nums.sort()
+        ans = []
+        for i in nums:
+            if nums.count(i) == 1:
+                ans.append(i)
+        if ans:
+            return ans[0]  
+        else:
+            return None    
