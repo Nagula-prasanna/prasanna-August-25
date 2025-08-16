@@ -1,0 +1,6 @@
+class Solution(object):
+    def majorityElement(self, nums):
+        from collections import Counter
+        n = len(nums)
+        freq = Counter(nums)
+        return [num for num, count in freq.items() if count > n // 3]
